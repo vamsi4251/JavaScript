@@ -1,0 +1,86 @@
+<!--
+    
+    Document Object Model(DOM)
+
+    The DOM provides functions that allow you to add, remove, and modify parts of the document effectively.
+    The DOM represents an HTML document as a tree of nodes.
+
+    exemple :
+
+    nodes :- html, head, body, title, p etc..
+
+    node relationship:-
+    Any node has relationships to other nodes in the DOM tree, and it is same as described in the traditional family tree.
+
+    exemple:
+    nodeType :- head, body nodes are child nodes of html node which is parent
+
+    Selecting Elements:
+
+    there are various selecting elements in DOM
+
+    ex: document.getElementById()
+        document.getElementByName()
+        document.getElementByClassName()
+        document.getElementByTagName()
+
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- id -->
+    <p id="message">JavaScript DOM</p>
+
+    <!-- name -->
+    <input type="radio" name="language" value="JS">
+    <input type="radio" name="language" value="python">
+
+    <!-- TagName -->
+    <h1>heading1</h1>
+    <h1>heading2</h1>
+    <h1>heading3</h1>
+
+    <!-- ClassName -->
+
+    <h1 class="message">heading1</h1>
+    <h1 class="message">heading2</h1>
+    <h1 class="message">heading3</h1>
+
+    <script>
+        // id
+        let msg = document.getElementById("message");
+        console.log(msg);
+        
+        // name
+        let btn = document.getElementsByName("language");
+        console.log(btn);
+
+        // by TagName
+
+        let haeding = document.getElementsByTagName("h1");
+        console.log(haeding);
+
+        //by ClassName
+        let message = document.getElementsByClassName("message");
+        console.log(message);
+
+        //querySelector
+        let x= document.querySelector(".message");
+        console.log(x);
+
+        //querySelector
+        let y= document.querySelectorAll(".message");
+        console.log(y);
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!-- 
+
+    MANIPULATING ELEMENTS:
+    manipulating elements are used to manipulate the html documents.
+
+    1.createElemrnt() method :-
+    To create an HTML element, we use the createElemrnt() method.
+    The document.createElement() accepts an HTML tag name and returns a new Node with the Element type.
+
+
+    2.appendChild() method:-
+    We Use appendChild() method to add a node to the end of the list of child nodes of a specified parent node.
+    The appendChild() can be used to move an existing child node to the new position within the document.
+
+    3.textContent() method:-
+    To get the text content of a node and its descendants, you use the textContent property.
+
+    4.innerHTML :-
+    use to add content to html document with styles
+
+    5.after() method:-
+    We can use after() method to insert one or more nodes after the element.
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- appendChield() method: -->
+
+    <ul id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Project</li>
+    </ul>
+
+
+    <script>
+        // createElemrnt() method
+        let div = document.createElement("div"); //creating div tag using js
+        div.innerHTML = "<p>hello</p>" //adding p tag to div tag
+        div.className = "title" // adding class name to div tag
+        document.body.appendChild(div); // adding div tag to webpage
+        console.log(div)
+
+        // appendChield() method
+
+        let menu = document.getElementById("menu");
+        let list = document.createElement("li");
+        list.innerHTML = "Contect";
+        menu.appendChild(list);
+
+        // textContent
+        // console.log(menu.textContent)
+
+        // innerHTML
+        // menu.innerHTML = "<h1>hello </h1>";
+
+
+    </script>
+</body>
+</html>
